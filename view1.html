@@ -1,0 +1,131 @@
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Kanit|Reenie+Beanie&display=swap" rel="stylesheet">
+
+<div class="mission">
+	<div class="text" id="text1">
+		<!-- <p><span class="begin">Design for Communication</span><br/></p> -->
+		<p><span class="begin">Clinical Psychotherapist's Website</span><br/></p>
+		<p>A website for a <strong>clinical psychotherapist</strong> not only challenges me to create a website to bring in new clients and new businesses but should also help the prospective clients to connect with the personality of the therapist themselves. A good client-therapist relationship is based off trust and if design can communicate character then this website is meant to engage the client with the therapist at a more intimate level.</p>
+		<p>In this project it was key to appropriately capture the therapist's character and turn it into functional design. Pitching an initial design was needed to gauge what my client would like. This brought forth a set of themes and design criteria that could be summarized by the following concepts; <i>Soft and Meditative, Spiritual, Comforting, Minimalistic</i>.
+		<p> Undersanding counseling and pyschotherapy was necessary as well so that I could design a platform that would conform to the profession. This introduced technical and design criteria which can be summarized by the following: <i> Lures visitors to read "about", Supplies information regards sessions cost and insurance, Is minimalistic and Clear.</i>
+
+		<p>After understanding these basic requirements I set off to design and deliver a final product that would only then be tweaked to change a few words and effects. Good communication, research and good design delivered a fashionable, beautiful and effective website.</p>
+	</div>
+	<div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div>
+	<iframe class="siteframe" id="site1" src="http://www.ciracanelas.com/index.html"></iframe>
+	<a href="http://www.ciracanelas.com/index.html" target="_blank">Open In New Tab</a>
+</div>
+
+<!-- font-family: 'Kanit', sans-serif;
+font-family: 'Crimson Text', serif;
+font-family: 'Reenie Beanie', cursive; -->
+<style>
+	* { 
+		font-family: 'Crimson Text', serif;
+		color:  rgba(255,255,255,.8);
+	}
+	p {
+		padding: 5px 0 5px 0;
+		font-size: 16px;
+		font-family: 'Crimson Text', serif;
+		color:  rgba(255,255,255,.8);
+	}
+	h1 {
+		text-decoration: bold;
+	}
+	img {
+		width: 400px;
+		object-fit: contain;
+		object-position: center;
+		transition: .75s;
+
+		filter: blur(2px) grayscale(30%);
+	}
+	.img_container {
+		top: 200px;
+		position: absolute;
+		margin: 25px;
+
+	}
+	.button {
+		width: 200px;
+		margin-top: 25px;
+		padding: 15px;
+		background-color: rgba(14,4,0,.5);
+		font-size: 28px;
+		text-align: center;
+		opacity: 1;
+		transition: 0.5s;
+		border: 2px solid rgba(255,255,255,1);
+		z-index: 100;
+	}
+	.button:hover {
+		cursor: pointer;
+		background-color: rgba(45,4,0,.7);
+		border: 2px solid rgba(255,255,255,0.5);
+	}
+
+	.begin {
+		position: relative;
+		font-size: 25px;
+	}
+	.mission {
+		position: absolute;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+		/*top: 25%;*/
+		padding: 0 50px 0 50px;
+		z-index: 99;
+	}
+	.text {
+		transition: 1s;
+		width: 70%;
+		padding: 15px 25px 15px 25px;
+		background-color: rgba(14,4,0,.5);
+	}
+	.siteframe {
+		z-index: 2000;
+		position: absolute;
+		background: white;
+		transition: 1s;
+		top: -32vh;
+		width: 100%;
+		height: 150%;
+		transform: scale(0.5) translateY(300vh);
+		box-shadow: 0 15px 50px 15px rgba(0,0,0,0.75);
+	}
+</style>
+<script>
+var site_open = false;
+function toggleSite(n) {
+	if (document.getElementById(`site${n}`)) {
+		if (!site_open)
+		{
+			console.log("open");
+			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(0)";
+			document.getElementById(`text${n}`).style.filter="blur(2px)";
+			site_open = true;
+			window.onmousedown = function() {toggleSite(1)};
+		}
+		else
+		{
+			console.log("close");
+			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(300vh)";
+			document.getElementById(`text${n}`).style.filter="blur(0px)";
+
+			site_open = false;
+
+			window.onmousedown = function() {};
+		}
+	}
+}
+</script>

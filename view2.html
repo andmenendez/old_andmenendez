@@ -1,0 +1,139 @@
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Kanit|Reenie+Beanie&display=swap" rel="stylesheet">
+
+<div class="mission">
+	<div class="text" id="text1">
+		<!-- <p><span class="begin">Design for Communication</span><br/></p> -->
+		<p><span class="begin">Individuality and Uniqueness</span><br/></p>
+		<p>Competing against CMS platforms like wix and wordpress is arguably <strong>impossible</strong>. They supply excellent tools for even the most naive of laymen to create their own websites. These services are also inexpensive and quickly deployable as only software stands between the client and his website.</p>
+		<p>Yet in this flood of CMS, DIY and website builder platforms comes a toll of creativity. Most <i>blogs, journals, and porfolios </i> all conform to a sort of standard limited by the platform. For this reason wordpress has overtaken a large part of the market as users can code a substantial amount of their own website if desired. Yet even at this point there is an arguable lack of creativity. Below is a basic template that I developed and deployed within <strong>one day</strong>. One doesn't have to sacrifice time and money for dynamic design.</p>
+		<p> Common websites I run into are static and boring. <i>Nobody remembers them.</i> Yet when we run into the websites of renouned designers and developers we become captured. I find myself immersed and entertained as I navigate through the webpages of these artists. Some excellent examples are of:</p> 
+			<i><a href="https://gmunk.com" target="_blank">GMunk</a>, 
+				<a href="https://www.alexcoven.com" target="_blank">Alex Coven</a>, 
+				<a href="https://www.martinehrlich.com/about" target="_blank">Martin Ehrlich</a>
+			</i>
+		<p>I look to develop custom websites for clients who value individuality and uniquness in their brand. Creating dynamic pages that draw users in and communicate more than just a product.</p>
+	</div>
+	<div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div>
+	<iframe class="siteframe" id="site1" src="ShrinkingLogo/index.html"></iframe>
+	<!-- <a href="ShrinkingLogo/index.html" target="_blank">Open In New Tab</a> -->
+</div>
+
+<!-- font-family: 'Kanit', sans-serif;
+font-family: 'Crimson Text', serif;
+font-family: 'Reenie Beanie', cursive; -->
+<style>
+	* { 
+		font-family: 'Crimson Text', serif;
+		color:  rgba(255,255,255,1);
+	}
+	li {
+		width: 500px;
+		text-align: left;
+		padding-left: 50px;
+	}
+	p {
+		padding: 5px 0 5px 0;
+		font-size: 16px;
+		font-family: 'Crimson Text', serif;
+		color:  rgba(255,255,255,.8);
+	}
+	h1 {
+		text-decoration: bold;
+	}
+	img {
+		width: 400px;
+		object-fit: contain;
+		object-position: center;
+		transition: .75s;
+
+		filter: blur(2px) grayscale(30%);
+	}
+	.img_container {
+		top: 200px;
+		position: absolute;
+		margin: 25px;
+
+	}
+	.button {
+		width: 200px;
+		margin-top: 25px;
+		padding: 15px;
+		background-color: rgba(14,4,0,.5);
+		font-size: 28px;
+		text-align: center;
+		opacity: 1;
+		transition: 0.5s;
+		border: 2px solid rgba(255,255,255,1);
+		z-index: 100;
+	}
+	.button:hover {
+		cursor: pointer;
+		background-color: rgba(45,4,0,.7);
+		border: 2px solid rgba(255,255,255,0.5);
+	}
+
+	.begin {
+		position: relative;
+		font-size: 25px;
+	}
+	.mission {
+		position: absolute;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+		/*top: 25%;*/
+		padding: 0 50px 0 50px;
+		z-index: 99;
+	}
+	.text {
+		transition: 1s;
+		width: 70%;
+		padding: 15px 25px 15px 25px;
+		background-color: rgba(14,4,0,.5);
+	}
+	.siteframe {
+		z-index: 2000;
+		position: absolute;
+		background: white;
+		transition: 1s;
+		top: -32vh;
+		width: 100%;
+		height: 150%;
+		transform: scale(0.5) translateY(300vh);
+		box-shadow: 0 15px 50px 15px rgba(0,0,0,0.75);
+	}
+</style>
+<script>
+var site_open = false;
+function toggleSite(n) {
+	if (document.getElementById(`site${n}`)) {
+		if (!site_open)
+		{
+			console.log("open");
+			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(0)";
+			document.getElementById(`text${n}`).style.filter="blur(2px)";
+			site_open = true;
+			window.onmousedown = function() {toggleSite(1)};
+		}
+		else
+		{
+			console.log("close");
+			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(300vh)";
+			document.getElementById(`text${n}`).style.filter="blur(0px)";
+
+			site_open = false;
+
+			window.onmousedown = function() {};
+		}
+	}
+}
+</script>
