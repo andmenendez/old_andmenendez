@@ -147,6 +147,7 @@ body {
 	height: 100px;
 	opacity: 0;
 	transition: 1s;
+	transition-timing-function: ease-out;
 	overflow: hidden;
 	z-index: 9999;
 }

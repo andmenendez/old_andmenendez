@@ -19,8 +19,8 @@ function getObjectHTML(i)
 
 function fadeIn()
 {
-	clip.classList.add("glass");
 	fader_logo.style.opacity = 0;
+	clip.classList.add("glass");
 }
 
 function fadeOut()
