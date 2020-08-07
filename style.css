@@ -121,11 +121,6 @@ body {
 
 	clip-path: 	polygon(0% 0%, 90% 0%, 100% 100%,  10% 100%);
 
-	-webkit-webkit-transform: translate3d(0,0,0);
-	-moz-webkit-transform: translate3d(0,0,0);
-	-ms-webkit-transform: translate3d(0,0,0);
-	-o-webkit-transform: translate3d(0,0,0);
-	webkit-transform: translate3d(0,0,0);
 	-webkit-webkit-backface-visibility: hidden;
 	-moz-webkit-backface-visibility: hidden;
 	-ms-webkit-backface-visibility: hidden;
@@ -134,8 +129,8 @@ body {
 }
 #name_large {
 	font-family: 'Roboto', sans-serif;
-	position: absolute;
-	left: 50%;
+	position: fixed;
+	left: 35%;
 	top: 50%;
 	transform: translate(-50%,-50%);
 	font-size: 84px;
@@ -184,6 +179,7 @@ body {
 	padding: 5px 18px 5px 10px;
 	border: 1px solid white;
 	overflow: hidden;
+	text-align: center;
 }
 .name:hover {
 	cursor: pointer;
@@ -201,7 +197,6 @@ body {
 .name:hover > #name_animation {
 	transform: translateX(400px) rotate(45deg);;
 }
-
 .nav {	
 	display: flex;
 	flex-direction: row;

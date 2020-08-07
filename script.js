@@ -9,6 +9,7 @@ const html_reference = document.getElementById("reference");
 const content = document.getElementById("content_body");
 
 var i = 0;
+const NMAX = 5;
 
 function getObjectHTML(i)
 {
@@ -46,7 +47,7 @@ function commit(i)
 
 function go_right()
 {
-	if (i < 4){
+	if (i < 5){
 			i++;
 		} else {
 			i=0;
@@ -59,7 +60,7 @@ function go_left()
 	if (i > 0){
 			i--;
 		} else {
-			i=4;
+			i=NMAX;
 		}
 	commit(i);
 }

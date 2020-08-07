@@ -1,3 +1,4 @@
+
 <!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
 <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
 
@@ -6,29 +7,25 @@
 
 <div class="mission">
 	<div class="text" id="text1">
-		<!-- <p><span class="begin">Design for Communication</span><br/></p> -->
-		<p><span class="begin">Inspiration: Cowboy Bebop Timer</span><br/></p>
-		<p>Inspiration is a necessary yet ephemeral notion. Too often do we need it when we don't have it and too often are we flooded when we can't express it.</p>
-		<p>This simple website was inspired by a show and turned into a neat tool designed in vanilla javascript to keep track of a work timer. It was created to exercise and demonstrate some of my javascript skills. Click below to check it out!</p>
+		<p><span class="begin">Uniqueness & Competitiveness</span><br/></p>
+		<p>Competing against CMS platforms like Wix, Squarespace & Wordpress is arguably <strong>impossible</strong>. They supply excellent tools for even the most naive of laymen to create their own websites. These services are also inexpensive & quickly deployable as only software stands between the client & his website.</p>
+		<p>Yet in this flood of CMS, DIY & website builder platforms comes a toll of creativity. Most <i>blogs, journals, & portfolios </i> all conform to a sort of standard limited by these platforms. For this reason wordpress has overtaken a large part of the market as users can code a substantial amount of their own website if desired. Yet even at this point there is an arguable lack of creativity.
+		<p>Common websites I run into are static & boring. <i>Nobody remembers them.</i> Yet when we run into the websites of renown designers & developers we become captured. I find myself immersed & entertained as I navigate through the webpages of these artists. Some excellent examples that inspire me are:</p>
+			<i><a href="https://gmunk.com" target="_blank">GMunk</a>, 
+				<a href="https://www.alexcoven.com" target="_blank">Alex Coven</a>, 
+				<a href="https://www.martinehrlich.com/about" target="_blank">Martin Ehrlich</a></i> 
+		<p>Below is a website I created for a client. This was inspired to bring individuality & uniqueness to the client yet be an easy & effective experience to any prospective customers. Understanding the client & their business was key to delivering such a smooth, minimalistic & fashionable website.</p>
 	</div>
-	<div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div>
-	<iframe class="siteframe3" id="site1" src="https://beboptimer.herokuapp.com/WorkClock_v2.html"></iframe>
-	<a href="https://beboptimer.herokuapp.com/WorkClock_v2.html" target="_blank">Open In New Tab</a>
-	
+	<!-- <div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div> -->
+	<!-- <iframe class="siteframe" id="site1" src="http://www.ciracanelas.com/index.html"></iframe> -->
+	<a class="button" id="button1" href="http://www.ciracanelas.com/index.html" target="_blank"><i>ciracanelas.com</i></a>
 </div>
 
-<!-- font-family: 'Kanit', sans-serif;
-font-family: 'Crimson Text', serif;
-font-family: 'Reenie Beanie', cursive; -->
+
 <style>
 	* { 
 		font-family: 'Crimson Text', serif;
-		color:  rgba(255,255,255,1);
-	}
-	li {
-		width: 500px;
-		text-align: left;
-		padding-left: 50px;
+		color:  rgba(255,255,255,.8);
 	}
 	p {
 		padding: 5px 0 5px 0;
@@ -94,40 +91,40 @@ font-family: 'Reenie Beanie', cursive; -->
 		padding: 15px 25px 15px 25px;
 		background-color: rgba(14,4,0,.5);
 	}
-	.siteframe3 {
+	.siteframe {
 		z-index: 2000;
 		position: absolute;
 		background: white;
 		transition: 1s;
-		top: -10vh;
+		top: -32vh;
 		width: 100%;
-		height: 100%;
-		transform: scale(.75) translateY(300vh);
+		height: 150%;
+		transform: scale(0.5) translateY(300vh);
 		box-shadow: 0 15px 50px 15px rgba(0,0,0,0.75);
 	}
 </style>
 <script>
-var site_open = false;
-function toggleSite(n) {
-	if (document.getElementById(`site${n}`)) {
-		if (!site_open)
-		{
-			console.log("open");
-			document.getElementById(`site${n}`).style.transform="scale(.75) translateY(0)";
-			document.getElementById(`text${n}`).style.filter="blur(2px)";
-			site_open = true;
-			window.onmousedown = function() {toggleSite(1)};
-		}
-		else
-		{
-			console.log("close");
-			document.getElementById(`site${n}`).style.transform="scale(.75) translateY(300vh)";
-			document.getElementById(`text${n}`).style.filter="blur(0px)";
+// var site_open = false;
+// function toggleSite(n) {
+// 	if (document.getElementById(`site${n}`)) {
+// 		if (!site_open)
+// 		{
+// 			console.log("open");
+// 			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(0)";
+// 			document.getElementById(`text${n}`).style.filter="blur(2px)";
+// 			site_open = true;
+// 			window.onmousedown = function() {toggleSite(1)};
+// 		}
+// 		else
+// 		{
+// 			console.log("close");
+// 			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(300vh)";
+// 			document.getElementById(`text${n}`).style.filter="blur(0px)";
 
-			site_open = false;
+// 			site_open = false;
 
-			window.onmousedown = function() {};
-		}
-	}
-}
+// 			window.onmousedown = function() {};
+// 		}
+// 	}
+// }
 </script>

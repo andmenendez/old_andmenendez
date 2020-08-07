@@ -7,23 +7,37 @@
 
 <div class="mission">
 	<div class="text" id="text1">
-		<!-- <p><span class="begin">Design for Communication</span><br/></p> -->
-		<p><span class="begin">Individuality and Uniqueness</span><br/></p>
-		<p>Competing against CMS platforms like Wix, Squarespace and Wordpress is arguably <strong>impossible</strong>. They supply excellent tools for even the most naive of laymen to create their own websites. These services are also inexpensive and quickly deployable as only software stands between the client and his website.</p>
-		<p>Yet in this flood of CMS, DIY and website builder platforms comes a toll of creativity. Most <i>blogs, journals, and portfolios </i> all conform to a sort of standard limited by these platforms. For this reason wordpress has overtaken a large part of the market as users can code a substantial amount of their own website if desired. Yet even at this point there is an arguable lack of creativity. Below is a basic template that I developed and deployed within <strong>one day</strong>. One doesn't have to sacrifice time and money for dynamic design.</p>
-		<p> Common websites I run into are static and boring. <i>Nobody remembers them.</i> Yet when we run into the websites of renouned designers and developers we become captured. I find myself immersed and entertained as I navigate through the webpages of these artists. Some excellent examples are of:</p> 
-			<i><a href="https://gmunk.com" target="_blank">GMunk</a>, 
-				<a href="https://www.alexcoven.com" target="_blank">Alex Coven</a>, 
-				<a href="https://www.martinehrlich.com/about" target="_blank">Martin Ehrlich</a>
-			</i>
-		<p>I look to develop custom websites for clients who value individuality and uniquness in their brand. Creating dynamic pages that draw users in and communicate more than just a product.</p>
+		<p><span class="begin">Inspiration & Individuality</span><br/></p>
+		<p>Becoming proficient & becoming a professional are 2 distinct things. The former involves technique & objective skill. But a professional not only owns that very proficiency but expresses his own style through their skill.</p>
+		<p>As a self-taught developer I have found that only repetition can result in delivering professional work. Through out my work, I've always tried to keep exercising & exp&ing my knowledge by working on small projects. Below are examples of 3 small ideas I developed for the sake of exercising my expertise.</p>
+		<p>Some of these projects are running on free heroku servers that may require up to 30 seconds to run on available heroku dynos.</p>
 	</div>
-	<div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div>
-	<iframe class="siteframe" id="site1" src="ShrinkingLogo/index.html"></iframe>
-	<a href="ShrinkingLogo/index.html" target="_blank">Open In New Tab</a>
+	<!-- <div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div> -->
+	<!-- <iframe class="siteframe" id="site1" src="ShrinkingLogo/index.html"></iframe> -->
+	<a class="button2" href="https://beboptimer.herokuapp.com/" target="_blank">JAVASCRIPT</a>
+	<a class="button2" href="https://dota-stars.herokuapp.com/" target="_blank">RUBY ON RAILS</a>
+	<a class="button2" href="https://stocktestappidea.herokuapp.com/" target="_blank">FLASK</a>
+	<a class="button2" href="ShrinkingLogo/index.html" target="_blank">BASICS</a>
 </div>
 
 <style>
+	.button2 {
+		padding: 5px;
+		margin-top: 10px;
+		/*margin: 5px;*/
+		background-color: rgba(14,4,0,0.4);
+		width: 200px;
+		text-align: center;
+
+		border: 2px solid rgba(255,255,255,0);
+		transition: .1s;
+	}
+	.button2:hover {
+		border: 2px solid rgba(255,255,255,.5);
+	}
+	a {
+		text-decoration: none;
+	}
 	* { 
 		font-family: 'Crimson Text', serif;
 		color:  rgba(255,255,255,1);
@@ -110,27 +124,27 @@
 	}
 </style>
 <script>
-var site_open = false;
-function toggleSite(n) {
-	if (document.getElementById(`site${n}`)) {
-		if (!site_open)
-		{
-			console.log("open");
-			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(0)";
-			document.getElementById(`text${n}`).style.filter="blur(2px)";
-			site_open = true;
-			window.onmousedown = function() {toggleSite(1)};
-		}
-		else
-		{
-			console.log("close");
-			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(300vh)";
-			document.getElementById(`text${n}`).style.filter="blur(0px)";
+// var site_open = false;
+// function toggleSite(n) {
+// 	if (document.getElementById(`site${n}`)) {
+// 		if (!site_open)
+// 		{
+// 			console.log("open");
+// 			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(0)";
+// 			document.getElementById(`text${n}`).style.filter="blur(2px)";
+// 			site_open = true;
+// 			window.onmousedown = function() {toggleSite(1)};
+// 		}
+// 		else
+// 		{
+// 			console.log("close");
+// 			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(300vh)";
+// 			document.getElementById(`text${n}`).style.filter="blur(0px)";
 
-			site_open = false;
+// 			site_open = false;
 
-			window.onmousedown = function() {};
-		}
-	}
-}
+// 			window.onmousedown = function() {};
+// 		}
+// 	}
+// }
 </script>

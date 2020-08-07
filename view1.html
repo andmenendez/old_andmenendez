@@ -1,4 +1,3 @@
-
 <!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
 <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
 
@@ -7,15 +6,28 @@
 
 <div class="mission">
 	<div class="text" id="text1">
-		<p><span class="begin">Clients: Clinical Psychotherapist's Website</span><br/></p>
-		<p>A website for a <strong>clinical psychotherapist</strong> not only challenges me to create a website to bring in new clients and new businesses but should also help the prospective clients to connect with the personality of the therapist. A good client-therapist relationship is based off trust and if design can communicate character then this website is meant to engage the client with the therapist at a more intimate level.</p>
-		<p>In this project it was key to appropriately capture the therapist's character and turn it into functional design. Pitching an initial design was needed to gauge what my client would like. This brought forth a set of themes and design criteria that could be summarized by the following concepts; <i>Soft, Meditative, Spiritual, Comforting and Minimalistic</i>.
-		<p> Understanding counseling and pyschotherapy was necessary as well so that I could design a platform that would conform to the profession. This introduced technical and design criteria which can be summarized by the following: <i> Lures visitors to read "about", Supplies information regarding sessions cost and insurance, Is minimalistic and Clear.</i>
-		<p>After understanding these basic requirements I set off to design and deliver a final product that would only then be tweaked to change a few words and effects. Good communication, research and good design delivered a fashionable, beautiful and effective website.</p>
+		<!-- <p><span class="begin">Design for Communication</span><br/></p> -->
+		<p><span class="begin">Creativity & Inspiration</span><br/></p>
+		<p>Creativity & inspiration, both necessary for innovation & development yet both very ephemeral notions. It is sometimes difficult to hold onto creativity and inspiration.. yet when they arise they are found outside of their creative subjects as if compelled by external objects; like solving a litany of philosophical uncertainties amidst climbing mountains.<br/>
+		I find that the breadth of my technical background gifts me a unique perspective to the world of computer science. Below is a short list of some of my achievements that reflect the breadth of my background:</p>
+		<div style="width: 100%; padding: 0 30px 0 30px;">
+			<ul>
+				<li>
+					<p><strong>Orchard:</strong> I was recruited to design the electrical control systems for a small hydroponics startup I successfully design & implemented a controlled multi-colored lighting system. Plants grow differently under different wavelengths through research & testing I was able to create a lighting array that could target specific wavelengths to stimulate different forms of plant growth (picture of device in background)</p>
+				</li>
+				<li>
+					<p><strong>Excel Automation:</strong> I worked for Cupertino Electric in the Bay Area, CA, where many employees had become accustomed to doing very repetitive & tedious tasks. During my internship I created several automated methods via excel macros & one nearest neighbor AI that would automate a lot of the work.</p>
+				</li>
+				<li>
+					<p><strong>NaTECC Research:</strong> I designed, programmed & tested theoretical models & simulations via MATLAB of an innovative renewable energy device. I had to perform several cross-variable parametric analyses to optimize system variables & implement effective models. My results were consequently acknowledged in a published paper: <a class="" href="https://www.sciencedirect.com/science/article/abs/pii/S037877531731354X"> Link to paper</a></p>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div>
-	<iframe class="siteframe" id="site1" src="http://www.ciracanelas.com/index.html"></iframe>
-	<a href="http://www.ciracanelas.com/index.html" target="_blank">Open In New Tab</a>
+	<!-- <div class="button" id="button1" onclick="toggleSite(1)">OPEN SITE</div> -->
+	<!-- <iframe class="siteframe3" id="site1" src="https://beboptimer.herokuapp.com/WorkClock_v2.html"></iframe> -->
+	
+	
 </div>
 
 <!-- font-family: 'Kanit', sans-serif;
@@ -24,7 +36,18 @@ font-family: 'Reenie Beanie', cursive; -->
 <style>
 	* { 
 		font-family: 'Crimson Text', serif;
-		color:  rgba(255,255,255,.8);
+		color:  rgba(255,255,255,1);
+	}
+	ul {
+		width: 95%
+		text-align: left;
+	}
+	li {
+		width: 90%;
+		font-size: 14px;
+		text-align: left;
+		/*padding-left: 50px;*/
+		padding: 5px 0 5px 0;
 	}
 	p {
 		padding: 5px 0 5px 0;
@@ -86,44 +109,45 @@ font-family: 'Reenie Beanie', cursive; -->
 	}
 	.text {
 		transition: 1s;
-		width: 70%;
+		width: 80%;
 		padding: 15px 25px 15px 25px;
-		background-color: rgba(14,4,0,.5);
+		background-color: rgba(255,255,255,.1);
+		background-color: rgba(14,4,0,.8);
 	}
-	.siteframe {
+	.siteframe3 {
 		z-index: 2000;
 		position: absolute;
 		background: white;
 		transition: 1s;
-		top: -32vh;
+		top: -10vh;
 		width: 100%;
-		height: 150%;
-		transform: scale(0.5) translateY(300vh);
+		height: 100%;
+		transform: scale(.75) translateY(300vh);
 		box-shadow: 0 15px 50px 15px rgba(0,0,0,0.75);
 	}
 </style>
 <script>
-var site_open = false;
-function toggleSite(n) {
-	if (document.getElementById(`site${n}`)) {
-		if (!site_open)
-		{
-			console.log("open");
-			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(0)";
-			document.getElementById(`text${n}`).style.filter="blur(2px)";
-			site_open = true;
-			window.onmousedown = function() {toggleSite(1)};
-		}
-		else
-		{
-			console.log("close");
-			document.getElementById(`site${n}`).style.transform="scale(0.5) translateY(300vh)";
-			document.getElementById(`text${n}`).style.filter="blur(0px)";
+// var site_open = false;
+// function toggleSite(n) {
+// 	if (document.getElementById(`site${n}`)) {
+// 		if (!site_open)
+// 		{
+// 			console.log("open");
+// 			document.getElementById(`site${n}`).style.transform="scale(.75) translateY(0)";
+// 			document.getElementById(`text${n}`).style.filter="blur(2px)";
+// 			site_open = true;
+// 			window.onmousedown = function() {toggleSite(1)};
+// 		}
+// 		else
+// 		{
+// 			console.log("close");
+// 			document.getElementById(`site${n}`).style.transform="scale(.75) translateY(300vh)";
+// 			document.getElementById(`text${n}`).style.filter="blur(0px)";
 
-			site_open = false;
+// 			site_open = false;
 
-			window.onmousedown = function() {};
-		}
-	}
-}
+// 			window.onmousedown = function() {};
+// 		}
+// 	}
+// }
 </script>
